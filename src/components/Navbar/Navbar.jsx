@@ -1,5 +1,4 @@
 import { RiMenu4Fill } from "react-icons/ri";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { motion, useScroll } from 'motion/react';
 
@@ -7,7 +6,7 @@ import { motion, useScroll } from 'motion/react';
 
 
 
-const Navbar = ({menu, setMenu, dark, setDark}) => {
+const Navbar = ({menu, setMenu}) => {
   const {scrollYProgress} = useScroll();
 
     const menuHandle = ()=>{
@@ -15,22 +14,11 @@ const Navbar = ({menu, setMenu, dark, setDark}) => {
     }
   return (
     <>
-      <div className={`flex justify-between items-center ${dark ? "text-white" : " text-zinc-900"} sticky w-full top-0 z-50 py-4 px-5 md:px-10 shadow-md bg-transparent backdrop-blur-2xl`}>
+      <div className={`flex justify-between items-center sticky w-full top-0 z-50 py-4 px-5 md:px-10 shadow-md bg-transparent backdrop-blur-2xl`}>
         <motion.div 
         style={{scaleX: scrollYProgress}}
         className='w-full fixed left-0 bottom-0 origin-left h-[2px] bg-amber-600 '/>
           <h1 className='flex flex-col leading-4 text-right font-semibold tracking-tight text-2xl'>  Hello <span>Silvassa</span> </h1>
-          <motion.button
-           drag
-          dragConstraints={{top:0,bottom:0,right:0,left:0}}
-          className='absolute top-[12px] cursor-pointer'
-          onClick={()=>setDark(!dark)}
-          >
-            {
-              dark ? <MdDarkMode /> : <MdLightMode />
-            }
-
-          </motion.button>
           <ul className='gap-7 tracking-tighter hidden font-semibold lg:flex'>
               <li className='hover:text-amber-800'><a href="#">Places to Stay</a></li>
               <li className='hover:text-amber-800'><a href="#">Food & Drinks</a></li>

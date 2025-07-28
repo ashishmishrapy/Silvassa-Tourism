@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Map = ({ dark }) => {
+const Map = () => {
   return (
-    <div className={`min-h-screen py-30 ${dark ? "text-white" : "text-zinc-900"}`}>
+    <div className={`min-h-screen py-30`}>
       <div className="lg:pl-80 md:pl-10 h-[100vh] flex flex-col">
-        <h1 className={`md:text-[80px] text-[50px] font-extrabold leading-none uppercase p-5 left-10 md:absolute z-10 ${dark ? "bg-zinc-900" : "bg-white"} `}>
+        <h1 className={`md:text-[80px] text-[50px] bg-[#faf5ef] font-extrabold leading-none uppercase p-5 left-10 md:absolute z-10`}>
           we're <br /> more than <br />
           just one city
         </h1>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-const Explore = ({dark}) => {
+const Explore = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -40,7 +40,7 @@ const Explore = ({dark}) => {
     });
   };
   return (
-    <div className={`min-h-screen w-full p-2  ${dark ? "text-white": "text-zinc-900 "}`}>
+    <div className={`min-h-screen w-full p-2 `}>
       <div className="lg:px-30 md:px-10">
         <div className="flex items-end gap-2 py-20">
         <h3 className="text-5xl md:text-7xl uppercase text-right font-extrabold">
@@ -75,7 +75,7 @@ const Explore = ({dark}) => {
             className="w-full lg:h-[70vh] object-cover object-bottom"
           />
 
-          <div className={`md:absolute bottom-0 z-10 lg:pr-20 lg:py-8 md:pr-2 ${dark ? "bg-zinc-900":"bg-white"}`}>
+          <div className={`md:absolute bg-[#faf5ef] bottom-0 z-10 lg:pr-20 lg:py-8 md:pr-2`}>
             <p className="md:text-5xl text-2xl leading-none text-shadow-2xs text-shadow-black mb-1 font-bold">
               Summer Guide for Beaches <br /> in Daman
             </p>

@@ -4,13 +4,13 @@ import Explore from '../components/HomePage/Explore/Explore'
 import ReelSection from '../components/HomePage/Reels/ReelSection'
 import Map from '../components/HomePage/Map/Map'
 
-const Home = ({dark}) => (
+const Home = () => (
   <div>
-    <Hero dark={dark} />
-    <MustVisit dark={dark} />
-    <Explore dark={dark} />
-    <Map dark={dark} />
-    <ReelSection dark={dark} />
+    <Hero />
+    <MustVisit />
+    <Explore />
+    <Map />
+    <ReelSection />
   </div>
 )
 

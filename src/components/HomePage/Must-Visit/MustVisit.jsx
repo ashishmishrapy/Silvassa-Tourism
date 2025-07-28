@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-const MustVisit = ({ dark }) => {
+const MustVisit = () => {
   const spots = [
     {
       title: "Swami Narayan Temple",
@@ -20,9 +20,7 @@ const MustVisit = ({ dark }) => {
     <div className="w-full flex flex-col justify-center p-2">
       <div className="lg:pl-30 md:pl-10">
         <div
-          className={`flex items-end gap-5 py-20 ${
-            dark ? "text-white" : "text-zinc-900"
-          }`}
+          className={`flex items-end gap-5 py-20`}
         >
           <h2 className="text-5xl md:text-7xl uppercase font-extrabold">
             Must Visit
